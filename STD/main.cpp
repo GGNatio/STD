@@ -14,7 +14,7 @@ public:
         shape.setRadius(radius);
         shape.setFillColor(sf::Color::Red);
         shape.setPosition(posX, posY);
-
+        
         speedX = (rand() % 5 + 1) * (rand() % 2 == 0 ? 1 : -1);
         speedY = (rand() % 5 + 1) * (rand() % 2 == 0 ? 1 : -1);
     }
@@ -55,6 +55,7 @@ public:
 enum class GameState { Menu, Jeu, GameOver };
 
 int main() {
+    
     sf::Font font;
     if (!font.loadFromFile("../assets/Jaro-Regular.ttf")) {
         return -1;
@@ -65,7 +66,9 @@ int main() {
 
     sf::RenderWindow window(sf::VideoMode(windowWidth, windowHeight), "Jeu Asteroids");
     window.setFramerateLimit(60);
-
+    sf::Texture t;
+    t.loadFromFile("../assets/bg.png");
+    sf::Sprite s(t);
     srand(static_cast<unsigned int>(time(0)));
 
     GameState gameState = GameState::Menu;
@@ -106,6 +109,7 @@ int main() {
         }
 
         if (gameState == GameState::Jeu) {
+            window.draw(s);
             for (auto& rond : ronds) {
                 rond.update();
 
@@ -146,6 +150,7 @@ int main() {
             window.draw(instructions);
         }
         else if (gameState == GameState::Jeu) {
+            window.draw(s);
             for (const auto& rond : ronds) {
                 window.draw(rond.shape);
             }
@@ -173,7 +178,7 @@ int main() {
             window.draw(replayText);
             window.draw(finalScoreText);
         }
-
+        
         window.display();
     }
 
