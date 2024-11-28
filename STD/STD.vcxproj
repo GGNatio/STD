@@ -76,9 +76,9 @@
     <PublicIncludeDirectories>C:\Users\aguionnet\Documents\GitHub\STD\STD\include;$(PublicIncludeDirectories)</PublicIncludeDirectories>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>C:\Users\aguionnet\Documents\GitHub\STD\STD\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\aguionnet\Documents\GitHub\STD\STD\lib;$(LibraryPath)</LibraryPath>
-    <PublicIncludeDirectories>C:\Users\aguionnet\Documents\GitHub\STD\STD\include;$(PublicIncludeDirectories)</PublicIncludeDirectories>
+    <IncludePath>C:\Users\jggui\Documents\GitHub\STD\STD\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\jggui\Documents\GitHub\STD\STD\lib;$(LibraryPath)</LibraryPath>
+    <PublicIncludeDirectories>C:\Users\jggui\Documents\GitHub\STD\STD\include;$(PublicIncludeDirectories)</PublicIncludeDirectories>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

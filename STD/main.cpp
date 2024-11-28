@@ -67,7 +67,7 @@ int main() {
     sf::RenderWindow window(sf::VideoMode(windowWidth, windowHeight), "Jeu Asteroids");
     window.setFramerateLimit(60);
     sf::Texture t;
-    t.loadFromFile("../assets/bg.png");
+    t.loadFromFile("../assets/back.png");
     sf::Sprite s(t);
     srand(static_cast<unsigned int>(time(0)));
 
