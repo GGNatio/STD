@@ -1,2 +1,9 @@
-﻿  STD.cpp
-  STD.vcxproj -> C:\Users\aguionnet\Documents\GitHub\STD\.vs\x64\Debug\STD.exe
+﻿  main.cpp
+C:\Users\aguionnet\source\repos\STD\STD\main.cpp(19,35): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
+C:\Users\aguionnet\source\repos\STD\STD\main.cpp(20,35): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
+C:\Users\aguionnet\source\repos\STD\STD\main.cpp(28,56): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\aguionnet\source\repos\STD\STD\main.cpp(28,34): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\aguionnet\source\repos\STD\STD\main.cpp(74,69): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\aguionnet\source\repos\STD\STD\main.cpp(74,55): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\aguionnet\source\repos\STD\STD\main.cpp(74,42): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+  STD.vcxproj -> C:\Users\aguionnet\source\repos\STD\x64\Debug\STD.exe

@@ -1,0 +1,14 @@
+﻿  main.cpp
+C:\Users\aguionnet\source\repos\STD\STD\main.cpp(18,35): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
+C:\Users\aguionnet\source\repos\STD\STD\main.cpp(19,35): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
+C:\Users\aguionnet\source\repos\STD\STD\main.cpp(27,56): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\aguionnet\source\repos\STD\STD\main.cpp(27,34): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\aguionnet\source\repos\STD\STD\main.cpp(82,81): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\aguionnet\source\repos\STD\STD\main.cpp(82,59): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+C:\Users\aguionnet\source\repos\STD\STD\main.cpp(82,46): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+  Génération de code en cours
+  1 of 169 functions ( 0.6%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Fin de la génération du code
+  STD.vcxproj -> C:\Users\aguionnet\source\repos\STD\x64\Release\STD.exe
