@@ -76,8 +76,8 @@ int main() {
     Vaisseau vaisseau(windowWidth / 2.f - 15, windowHeight / 2.f - 7.5f);
     std::vector<Rond> ronds;
 
-    int score = 0;                // Variable pour stocker le score
-    sf::Clock scoreClock;         // Horloge pour mesurer le temps écoulé
+    int score = 0;                
+    sf::Clock scoreClock;         
 
     auto resetGame = [&]() {
         ronds.clear();
@@ -86,7 +86,7 @@ int main() {
         }
         vaisseau.shape.setPosition(windowWidth / 2.f - 15, windowHeight / 2.f - 7.5f);
         score = 0;
-        scoreClock.restart();     // Réinitialise le compteur de temps
+        scoreClock.restart();     
         gameState = GameState::Jeu;
         };
 
