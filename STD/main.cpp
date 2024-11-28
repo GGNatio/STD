@@ -1,6 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include <SFML/System.hpp>
+#include <SFML/Audio.hpp> 
 #include <vector>
 #include <cstdlib>
 #include <ctime>
@@ -69,6 +70,21 @@ int main() {
     sf::Texture t;
     t.loadFromFile("../assets/back.png");
     sf::Sprite s(t);
+
+    sf::Music gameMusic;
+    if (!gameMusic.openFromFile("../assets/space.ogg")) {
+        return -1;
+    }
+    gameMusic.setLoop(true);
+    gameMusic.setVolume(50.f);
+
+    sf::Music gameOverMusic;
+    if (!gameOverMusic.openFromFile("../assets/gameover.ogg")) {
+        return -1;
+    }
+    gameOverMusic.setLoop(false); // Pas de boucle pour l'écran de Game Over
+    gameOverMusic.setVolume(50.f);
+
     srand(static_cast<unsigned int>(time(0)));
 
     GameState gameState = GameState::Menu;
@@ -88,6 +104,8 @@ int main() {
         score = 0;
         scoreClock.restart();     
         gameState = GameState::Jeu;
+        gameOverMusic.stop();    // Arrête la musique de Game Over
+        gameMusic.play();
         };
 
     while (window.isOpen()) {
@@ -120,6 +138,8 @@ int main() {
 
                 if (vaisseau.getBounds().intersects(rond.shape.getGlobalBounds())) {
                     gameState = GameState::GameOver;
+                    gameMusic.stop();      
+                    gameOverMusic.play();
                 }
             }
 
@@ -128,7 +148,7 @@ int main() {
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))  vaisseau.move(sf::Keyboard::Left);
             if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) vaisseau.move(sf::Keyboard::Right);
 
-            // Mise à jour du score toutes les secondes
+            
             if (scoreClock.getElapsedTime().asSeconds() >= 1.f) {
                 score++;
                 scoreClock.restart();
